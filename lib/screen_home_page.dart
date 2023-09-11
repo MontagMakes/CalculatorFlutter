@@ -15,8 +15,6 @@ class _MyHomePageState extends State<MyHomePage> {
       height: 50,
       width: 50,
       child: ElevatedButton(
-        
-          
         onPressed: (){
           setState(() {
             if(display == "0" || isResult){
@@ -27,7 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
             }
           });
         },
-        child: Text(num),
+        child: Text(num, style: const TextStyle(fontSize: 35),),
       ),
     );
   }
@@ -46,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
           }
         });
       },
-      child: Text(op),
+      child: Text(op, style: const TextStyle(fontSize: 35),),
     );
   }
 
@@ -127,12 +125,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     isResult = true;
                   });
                 },
-                child: const Text("=")),
+                child: const Text("=", style: TextStyle(fontSize: 35),)),
             ElevatedButton(onPressed: () {
               setState(() {
                 display = "0";
               });
-            }, child: const Text("C")),
+            }, child: const Text("C", style: TextStyle(fontSize: 35),)),
           ]),
         )
       ]),
